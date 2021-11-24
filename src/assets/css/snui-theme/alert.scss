@@ -1,0 +1,31 @@
+@import "../base/fn";
+
+.mu-dialog {
+  width: px2rem(520px);
+  height: px2rem(300px);
+  .mu-dialog-body{
+    text-align: center;
+    margin-top: px2rem(70px);
+    color: $grey70;
+  }
+  .mu-dialog-actions {
+    margin-top: px2rem(50px);
+    justify-content:space-between;
+    padding-left: px2rem(50px);
+    padding-right: px2rem(50px);
+    padding-bottom: px2rem(80px);
+    button {
+      border-radius: px2rem(10px);
+      min-width: px2rem(150px);
+      width: px2rem(150px);
+    }
+    button:first-child {
+      width: px2rem(60px);
+      border: 1px solid $grey50;
+    }
+    button:last-child {
+      color: $white;
+      background-color: $blue40;
+    }
+  }
+}

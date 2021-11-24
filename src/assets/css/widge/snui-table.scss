@@ -1,0 +1,22 @@
+@import "../base/fn";
+
+
+.snui-table{
+  width: 100%;
+  margin-bottom: 20px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: $transparent;
+  border: 1px solid $transparent;
+  border-radius: 5px;
+  th,td{
+    height: 40px;
+    padding: 5px 10px;
+    border: 1px solid $grey30;
+    font-weight: normal;
+    text-align: center;
+  }
+  .snui-thead{
+    background-color: $grey9;
+  }
+}

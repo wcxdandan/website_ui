@@ -1,0 +1,23 @@
+@import "../base/fn";
+
+.mu-checkbox-icon-checked {
+  color: $blue40;
+}
+.mu-checkbox-svg-icon {
+  width: px2rem(42px);
+  height: px2rem(42px);
+}
+.mu-checkbox-icon {
+  width: px2rem(42px);
+  height: px2rem(42px);
+  vertical-align: middle;
+  position: relative;
+  margin-right: px2rem(10px);
+}
+.mu-checkbox-label {
+  font-size: px2rem(28px);
+  color: $grey60;
+}
+.mu-checkbox-icon-uncheck {
+  color: $blue40;
+}

@@ -1,0 +1,19 @@
+.mu-raised-button-primary{
+  background-image: none;
+  background-color: #80c340;
+}
+.dept-list li{
+  color: #80c340 !important;
+}
+.appointment-notice .appointment-notice-content .appointment-notice-card .checkbox-checked-color{
+   color: #80c340 !important;
+}
+.mu-checkbox-icon-checked{
+  color: #80c340 !important;
+}
+.snui-login .login-header{
+  background-image: none;
+  background-color: #80c340;
+  /*background-color: #fff;*/
+}
+

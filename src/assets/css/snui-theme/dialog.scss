@@ -1,0 +1,44 @@
+@import "../base/fn";
+
+.mu-dialog{
+    overflow: hidden;
+    border-radius: px2rem(10px);
+    .mu-dialog-title{
+        height: px2rem(80px);
+        line-height: px2rem(80px);
+        font-size: px2rem(28px);
+        padding: 0 px2rem(20px);
+        background-color: $grey11;
+    }
+    .mu-dialog-body {
+        max-height: px2rem(450px);
+        padding: 0 px2rem(20px);
+        overflow-y: auto;
+    }
+    .mu-dialog-actions{
+        padding: 0;
+    }
+}
+.mu-date-picker-dialog .mu-dialog-body{
+    padding: 0;
+}
+
+.mu-dialog.snui-alert {
+    .mu-dialog-body{
+        padding: px2rem(60px) px2rem(10px);
+        text-align: center;
+    }
+    .mu-dialog-actions{
+        justify-content: space-around;
+        margin-bottom: px2rem(30px);
+        button:nth-child(1){
+            box-shadow: 0 0 5px $grey60;
+            border-radius: px2rem(10px);
+        }
+        button:nth-child(2){
+            background-image: linear-gradient(135deg, #00b0ec 0%, #518dff 40%, #5776ff 70%, #6166ff 100%, #6d59ff 100%);
+            border-radius: px2rem(10px);
+            color: $white;
+        }
+    }
+}

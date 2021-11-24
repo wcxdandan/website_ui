@@ -1,0 +1,12 @@
+@import "../base/fn";
+
+.snui-card{
+  width: px2rem(702px);
+  margin: 0 auto px2rem(20px) auto;
+  border-radius: px2rem(10px);
+  box-shadow: 0px 8px 15px 0px rgba(181, 181, 181, 0.3);
+  background-color: $white;
+}
+.snui-shadow{
+  box-shadow: 0px 8px 15px 0px rgba(181, 181, 181, 0.3);
+}

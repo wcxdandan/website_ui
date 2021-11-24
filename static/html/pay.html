@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付</title>
+    <script src="../js/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script src="../js/jweixin-1.0.0.js"></script>
+    <script language="javascript">
+        function ReplaceAll(str, sptr, sptr1) {
+            while (str.indexOf(sptr) >= 0) {
+                str = str.replace(sptr, sptr1);
+            }
+            return str;
+        }
+        var htmlContent = localStorage["pay"];
+        // 去掉两边的“
+        htmlContent = htmlContent.substr(1, htmlContent.length - 2);
+        // 将string中的\" 替换成"
+        htmlContent = ReplaceAll(htmlContent, "\\\"", "\"");
+        htmlContent = ReplaceAll(htmlContent, "\\n", "");
+        console.log(htmlContent);
+        document.write(htmlContent);
+    </script>
+</head>
+<body></body>
+</html>

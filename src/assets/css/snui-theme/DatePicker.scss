@@ -1,0 +1,17 @@
+@import "../base/fn";
+
+.mu-date-display{
+    background-color: $blue40;
+}
+.mu-day-button-bg{
+    background-color: $blue40;
+}
+.mu-flat-button-primary{
+    color: $blue40;
+}
+.mu-day-button.now .mu-day-button-text{
+    color: $blue40;
+}
+.mu-day-button.hover .mu-day-button-text, .mu-day-button.selected .mu-day-button-text{
+    color: $white;
+}

@@ -1,0 +1,24 @@
+@import "../base/fn";
+
+.snui-app-header{
+      position: relative;
+      width: 100%;
+      height: px2rem(88px);
+      padding: 0 px2rem(24px);
+      line-height: px2rem(88px);
+      text-align: center;
+      font-size: px2rem(36px);
+      color: #fff;
+      background-image: -moz-linear-gradient( 90deg, rgb(109,91,255) 0%, rgb(102,107,255) 40%, rgb(87,118,255) 70%, rgb(81,141,255) 100%, rgb(0,176,236) 100%);
+      background-image: -webkit-linear-gradient( 90deg, rgb(109,91,255) 0%, rgb(102,107,255) 40%, rgb(87,118,255) 70%, rgb(81,141,255) 100%, rgb(0,176,236) 100%);
+      background-image: -ms-linear-gradient( 90deg, rgb(109,91,255) 0%, rgb(102,107,255) 40%, rgb(87,118,255) 70%, rgb(81,141,255) 100%, rgb(0,176,236) 100%);
+      .iconfont{
+          color: #fff;
+      }
+      .left{
+          float: left;
+      }
+      .right{
+          float: right;
+      }
+}

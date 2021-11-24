@@ -1,0 +1,15 @@
+@import "../base/fn";
+
+
+.mu-tabs{
+  background-color: $transparent;
+  .mu-tab-link{
+    min-height: px2rem(88px);
+  }
+  .mu-tab-link-highlight{
+    background-color: $blue40;
+  }
+  .mu-tab-link.mu-tab-active{
+    color: $blue40
+  }
+}

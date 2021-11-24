@@ -1,0 +1,74 @@
+@import "fn";
+@import "variable/global";
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    background-color: $grey13;
+}
+
+body {
+    font-family: $snFontDefault;
+    color: $grey70;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+a img {
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: $blue40;
+}
+li{
+    list-style: none;
+}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.text-right{
+    text-align: right !important;
+}
+.text-left{
+    text-align: left !important;
+}
+.text-center{
+    text-align: center;
+}
+.no-border{
+    border:none !important;
+}
+.iconfont{
+    color: $grey50;
+}
+.blue40{
+  color: $blue40
+}
+.grey60{
+  color: $grey60
+}
+.btn-div {
+  width: 100%;
+  padding:px2rem(20px) px2rem(24px);
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  background-color: $grey40;
+}
