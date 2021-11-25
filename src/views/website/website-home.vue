@@ -1,7 +1,7 @@
 <template>
   <div id="app-home">
     <div class="main-header">
-      <sn-main></sn-main>
+      <header-main></header-main>
     </div>
     <div class="app-content">
       <div class="news-div">

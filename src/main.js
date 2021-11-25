@@ -109,7 +109,7 @@ Vue.component('add-AssociationIntroduce', addAssociationIntroduce);
 Vue.component('add-branchVip', addBranchVip);
 Vue.component('add-communist', addCommunistWork);
 Vue.component('add-counterpartSupport', addCounterpartSupport);
-Vue.component('sn-main', main);
+Vue.component('header-main', main);
 new Vue({
   el: '#app',
   render: h => h(App),

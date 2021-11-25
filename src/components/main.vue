@@ -38,74 +38,102 @@
     <!--导航栏-->
     <div class="main-menu">
       <div class="navigation">
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">首页</div>
-        <div class="menu-line"></div>
-        <div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">
-          <p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">协会介绍</p>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">首页</div>
+        </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">
+          <p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">黄煤介绍</p>
           <div class="menu-two" v-if="menu_two_status"  @mouseleave="leave()">
-            <ul>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-guanlibanfa');goXHJS('glbf')">管理办法</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-xiehuijianjie');goXHJS('xhjj')">协会简介</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mingyuhuizhang');goXHJS('myhz')">名誉会长</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-huizhang');goXHJS('hz')">会长</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-fuhuizhang');goXHJS('fhz')">副会长</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mishuzhang');goXHJS('msz')">秘书长</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-lishizhang');goXHJS('lsh')">理事会</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-jianshihui');goXHJS('jsh')">监事会</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-zuzhijigou');goXHJS('zzjg')">组织机构</li>
-            </ul>
+          <ul>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-guanlibanfa');goXHJS('glbf')">管理办法</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-xiehuijianjie');goXHJS('xhjj')">协会简介</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mingyuhuizhang');goXHJS('myhz')">名誉会长</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-huizhang');goXHJS('hz')">会长</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-fuhuizhang');goXHJS('fhz')">副会长</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mishuzhang');goXHJS('msz')">秘书长</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-lishizhang');goXHJS('lsh')">理事会</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-jianshihui');goXHJS('jsh')">监事会</li>
+          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-zuzhijigou');goXHJS('zzjg')">组织机构</li>
+          </ul>
+          </div>
           </div>
         </div>
-        <div class="menu-line"></div>
-        <div class="menu-item menu-one" @mouseenter="enterOne()" style="height: auto">
-          <p @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/djgz')">党建工作</p>
-          <div class="menu-two" v-if="menu_one_status"  @mouseleave="leave()">
-            <ul>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiandongtai');goUrl('/newsList/partyBuildingNews','partyBuildingNews')">党建动态</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'dangzhangdanggui');goUrl('/newsList/partyRegulations','partyRegulations')">党章党规</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiliejianghau');goUrl('/newsList/seriesSpeech','seriesSpeech')">系列讲话</li>
-            </ul>
-          </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/sjys')" @mouseleave="leave()">产品中心</div>
         </div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'gongzuodongtai');goUrl('/newsList/gzdt', 'gzdt')" @mouseleave="leave()">工作动态</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'xinxigonggao');goUrl('/newsList/xxgg', 'xxgg')" @mouseleave="leave()">信息公告</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'yishipeiyang');goUrl('/newsList/yspy', 'yspy')" @mouseleave="leave()">医师培养</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'zilvweiquan');goUrl('/newsList/zlwq', 'zlwq')" @mouseleave="leave()">自律维权</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'hangyexinwen');goUrl('/newsList/hyxw', 'hyxw')" @mouseleave="leave()">行业新闻</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'xinyigai');goUrl('/newsList/xyg', 'xyg')" @mouseleave="leave()">新医改</div>
-        <div class="menu-line"></div>
-        <div class="menu-item menu-one" @mouseenter="enterThree()" style="height: auto">
-          <p @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi');goUrl('/sjys')">十佳医师</p>
-          <div class="menu-two" v-if="menu_three_status"  @mouseleave="leave()">
-            <ul>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-zhongyaoxiaoxi');goUrlNewClass('/sjys','zyxx','')">重要信息</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-dahuizhaopian');goUrlNewClass('/sjys','dhzp','')">大会照片</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-shijiayishi');goUrlNewClass('/sjys', 'sjys', '07')">十佳医师</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-youxiuyishi');goUrlNewClass('/sjys', 'yxys', '07')">优秀医师</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-shijianvyishi');goUrlNewClass('/sjys', 'sjnys', '07')">十佳女医师</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-shijiaqingnianyishi');goUrlNewClass('/sjys', 'sjqnys', '07')">十佳青年医师</li>
-            </ul>
-          </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/newsList/gzdt', 'gzdt')" @mouseleave="leave()">工作动态</div>
         </div>
-        <div class="menu-line"></div>
-        <!--<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shaungbaifupin');goUrl('/newsList/sbfp','sbfp')" @mouseleave="leave()">双百扶贫</div>-->
-        <div class="menu-item menu-one" @mouseenter="enterFour()" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuan-ti-ji-jin')" style="height: auto">
-          <p>专题集锦</p>
-          <div class="menu-two" v-if="menu_four_status"  @mouseleave="leave()" style="width: 126px;">
-            <ul>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuantijijin-duikouzhiyuan');goUrl('/dkzy')" style="height: auto;width: auto">对口支援</li>
-              <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuantijijin-disancidahui');goUrl('/metting')" style="height: auto;width: auto">第三次代表大会</li>
-            </ul>
-          </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">信息公告</div>
         </div>
-        <div class="menu-line"></div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">新闻中心</div>
+        </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">线上服务</div>
+        </div>
+        <div class="menu-">
+          <div class="menu-line"></div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">联系我们</div>
+        </div>
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">-->
+          <!--<p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">黄煤介绍</p>-->
+          <!--<div class="menu-two" v-if="menu_two_status"  @mouseleave="leave()">-->
+            <!--<ul>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-guanlibanfa');goXHJS('glbf')">管理办法</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-xiehuijianjie');goXHJS('xhjj')">协会简介</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mingyuhuizhang');goXHJS('myhz')">名誉会长</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-huizhang');goXHJS('hz')">会长</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-fuhuizhang');goXHJS('fhz')">副会长</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mishuzhang');goXHJS('msz')">秘书长</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-lishizhang');goXHJS('lsh')">理事会</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-jianshihui');goXHJS('jsh')">监事会</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-zuzhijigou');goXHJS('zzjg')">组织机构</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item menu-one" @mouseenter="enterOne()" style="height: auto">-->
+          <!--<p @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/djgz')">产品中心</p>-->
+          <!--<div class="menu-two" v-if="menu_one_status"  @mouseleave="leave()">-->
+            <!--<ul>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiandongtai');goUrl('/newsList/partyBuildingNews','partyBuildingNews')">党建动态</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'dangzhangdanggui');goUrl('/newsList/partyRegulations','partyRegulations')">党章党规</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiliejianghau');goUrl('/newsList/seriesSpeech','seriesSpeech')">系列讲话</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'gongzuodongtai');goUrl('/newsList/gzdt', 'gzdt')" @mouseleave="leave()">工作动态</div>-->
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'xinxigonggao');goUrl('/newsList/xxgg', 'xxgg')" @mouseleave="leave()">信息公告</div>-->
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'hangyexinwen');goUrl('/newsList/hyxw', 'hyxw')" @mouseleave="leave()">新闻中心</div>-->
+        <!--<div class="menu-line"></div>-->
+        <!--<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'hangyexinwen');goUrl('/newsList/hyxw', 'hyxw')" @mouseleave="leave()">线上服务</div>-->
+        <!--<div class="menu-line"></div>-->
+
+        <!--&lt;!&ndash;<div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shaungbaifupin');goUrl('/newsList/sbfp','sbfp')" @mouseleave="leave()">双百扶贫</div>&ndash;&gt;-->
+        <!--<div class="menu-item menu-one" @mouseenter="enterFour()" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuan-ti-ji-jin')" style="height: auto">-->
+          <!--<p>联系我们</p>-->
+          <!--<div class="menu-two" v-if="menu_four_status"  @mouseleave="leave()" style="width: 126px;">-->
+            <!--<ul>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuantijijin-duikouzhiyuan');goUrl('/dkzy')" style="height: auto;width: auto">对口支援</li>-->
+              <!--<li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuantijijin-disancidahui');goUrl('/metting')" style="height: auto;width: auto">第三次代表大会</li>-->
+            <!--</ul>-->
+          <!--</div>-->
+        <!--</div>-->
+        <!--<div class="menu-line"></div>-->
       </div>
     </div>
     <div class="main-menu training-registration-main-menu"></div>
@@ -116,7 +144,7 @@
 <script type="text/javascript">
   import * as UtilsService from '../utils/utilsService';
   export default {
-    name: 'sn-main',
+    name: 'header-main',
     data() {
       return {
         menu_one_status: false,
@@ -342,49 +370,60 @@
       background-color: $blue11;
       .navigation {
         width: 1180px;
+        // width: 100vh;
         margin: 0 auto;
-        .menu-item {
-          width: 86px;
-          float: left;
-          text-align: center;
-          line-height: 20px;
-          margin: 10px;
-          cursor: pointer;
-          color: $white;
-          font-size: 16px;
-        }
-        .menu-one {
-          position: relative;
-          .menu-two {
-            position: absolute;
-            z-index: 1000;
-            top: 31px;
-            left: -10px;
-            width: 116px;
-            height: auto;
-            .menu-common {
-              height: 40px;
-              background-color: $blue11;
-              border-bottom: 1px solid $white;
-              text-align: center;
-              line-height: 40px;
-              color: $white;
-              font-size: 16px;
-              cursor: pointer;
-            }
-            .menu-common:hover {
-              background-color: $white;
-              color: $blue11;
-              font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        .menu- {
+          width: 100%;
+          .menu-item {
+            // width: 86px;
+
+            flex-grow: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // float: left;
+            text-align: center;
+            line-height: 20px;
+            margin: 10px;
+            cursor: pointer;
+            color: $white;
+            font-size: 16px;
+          }
+          .menu-one {
+            position: relative;
+            .menu-two {
+              position: absolute;
+              z-index: 1000;
+              top: 31px;
+              left: -10px;
+              width: 116px;
+              height: auto;
+              .menu-common {
+                height: 40px;
+                background-color: $blue11;
+                border-bottom: 1px solid $white;
+                text-align: center;
+                line-height: 40px;
+                color: $white;
+                font-size: 16px;
+                cursor: pointer;
+              }
+              .menu-common:hover {
+                background-color: $white;
+                color: $blue11;
+                font-weight: 700;
+              }
             }
           }
-        }
-        .menu-line {
-          width: 1px;
-          height: 20px;
-          float: left;
-          background-color: $main;
-          margin: 10px 0;
+          .menu-line {
+            width: 1px;
+            height: 20px;
+            float: left;
+            background-color: $main;
+            margin: 10px 0;
+          }
         }
       }
     }

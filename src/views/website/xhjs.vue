@@ -1,39 +1,43 @@
 <template>
   <div id="app-xhjs">
     <div class="main-header">
-      <sn-main v-on:watchXh="getXh"></sn-main>
+      <header-main v-on:watchXh="getXh"></header-main>
     </div>
     <div class="xhjs-content">
       <div class="xhjs-content-info-div">
         <div class="menu-crumbs-info">
           <label class="empty-block">&nbsp;</label>
           <label @click="goUrl('/websiteHome')">首页<i  class="iconfont icon-jiantouyou"></i></label>
-          <label>协会介绍</label>
+          <label>黄煤介绍</label>
         </div>
         <div class="left-menu">
-          <div :class="fristType === 'xhjj' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhjj')">协会简介</div>
-          <div :class="fristType === 'xhzc' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhzc')">协会章程</div>
-          <div :class="fristType === 'fwgy' ? 'title-text-sel' : 'title-text'" @click="fristClick('fwgy')">服务公约</div>
-          <div :class="fristType === 'xhld' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhld')">协会领导</div>
+          <div :class="fristType === 'xhjj' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhjj')">山西黄煤</div>
+          <!--<div :class="fristType === 'xhzc' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhzc')">协会章程</div>-->
+          <!--<div :class="fristType === 'fwgy' ? 'title-text-sel' : 'title-text'" @click="fristClick('fwgy')">服务公约</div>-->
+          <div :class="fristType === 'xhld' ? 'title-text-sel' : 'title-text'" @click="fristClick('xhld')">公司领导</div>
           <div class="menu-second" v-if="fristType === 'xhld'">
-            <div :class="secondType === 'myhz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','myhz')">名誉会长</div>
-            <div :class="secondType === 'hz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','hz')">会长</div>
-            <div :class="secondType === 'fhz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','fhz')">副会长</div>
-            <div :class="secondType === 'msz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','msz')">秘书长</div>
-            <div :class="secondType === 'lsh' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','lsh')">理事会</div>
-            <div :class="secondType === 'jsh' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','jsh')">监事会</div>
+            <!--<div :class="secondType === 'myhz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','myhz')">名誉会长</div>-->
+            <div :class="secondType === 'hz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','hz')">矿长</div>
+            <div :class="secondType === 'fhz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','fhz')">副矿长</div>
+            <div :class="secondType === 'msz' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','msz')">书记</div>
+            <!--<div :class="secondType === 'lsh' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','lsh')">理事会</div>-->
+            <!--<div :class="secondType === 'jsh' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('xhld','jsh')">监事会</div>-->
           </div>
-          <div :class="fristType === 'zzjg' ? 'title-text-sel' : 'title-text'" @click="fristClick('zzjg')">组织机构</div>
-          <div :class="fristType === 'glbf' ? 'title-text-sel' : 'title-text'" @click="fristClick('glbf')">管理办法</div>
-          <div :class="fristType === 'znbm' ? 'title-text-sel' : 'title-text'" @click="fristClick('znbm')">职能部门</div>
+          <!--<div :class="fristType === 'zzjg' ? 'title-text-sel' : 'title-text'" @click="fristClick('zzjg')">组织机构</div>-->
+          <!--<div :class="fristType === 'glbf' ? 'title-text-sel' : 'title-text'" @click="fristClick('glbf')">管理办法</div>-->
+          <div :class="fristType === 'znbm' ? 'title-text-sel' : 'title-text'" @click="fristClick('znbm')">子公司</div>
           <div class="menu-second" v-if="fristType === 'znbm'">
             <div :class="secondType === 'bgs' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','bgs')">办公室</div>
-            <div :class="secondType === 'hyb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','hyb')">会员部</div>
-            <div :class="secondType === 'pxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','pxb')">培训部</div>
-            <div :class="secondType === 'xxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','xxb')">信息部</div>
-            <div :class="secondType === 'qks' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','qks')">期刊社</div>
-            <div :class="secondType === 'das' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','das')">档案室</div>
-            <div :class="secondType === 'dqkhbgs' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','dqkhbgs')">定期考核办公室</div>
+            <!--<div :class="secondType === 'hyb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','hyb')">会员部</div>-->
+            <!--<div :class="secondType === 'pxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','pxb')">培训部</div>-->
+            <!--<div :class="secondType === 'xxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','xxb')">信息部</div>-->
+            <!--<div :class="secondType === 'qks' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','qks')">期刊社</div>-->
+            <!--<div :class="secondType === 'das' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','das')">档案室</div>-->
+            <div :class="secondType === 'hyb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','hyb')">鑫盛公司</div>
+            <div :class="secondType === 'pxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','pxb')">鑫能煤业</div>
+            <div :class="secondType === 'qks' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','qks')">鑫运煤业</div>
+            <div :class="secondType === 'xxb' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','xxb')">鑫益煤业</div>
+            <!--<div :class="secondType === 'dqkhbgs' ? 'title-ld-sel' : 'title-ld'" @click="secondClick('znbm','dqkhbgs')">定期考核办公室</div>-->
           </div>
         </div>
         <div class="right-context">

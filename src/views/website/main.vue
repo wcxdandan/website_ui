@@ -53,7 +53,7 @@
         <!--<div class="menu-item" @click="goUrl('/xhjs')">协会介绍</div>-->
         <!--<div class="menu-item menu-one" @mouseenter="enter()" style="height: auto" @click="goXHJS('xhjj')">-->
         <div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">
-          <p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">协会介绍</p>
+          <p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">黄煤简介</p>
           <div class="menu-two" v-if="menu_two_status"  @mouseleave="leave()">
             <ul>
               <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-guanlibanfa');goXHJS('glbf')">管理办法</li>
@@ -70,7 +70,7 @@
         </div>
         <div class="menu-line"></div>
         <div class="menu-item menu-one" @mouseenter="enterOne()" style="height: auto">
-          <p @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/djgz')">党建工作</p>
+          <p @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/djgz')">产品中心</p>
           <div class="menu-two" v-if="menu_one_status"  @mouseleave="leave()">
             <ul>
               <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiandongtai');goUrl('/newsList/partyBuildingNews')">党建动态</li>
@@ -84,17 +84,8 @@
         <div class="menu-line"></div>
         <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'xinxigonggao');goUrl('/newsList/xxgg')" @mouseleave="leave()">信息公告</div>
         <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'yishipeiyang');goUrl('/newsList/yspy')" @mouseleave="leave()">医师培养</div>
+        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'hangyexinwen');goUrl('/newsList/hyxw')" @mouseleave="leave()">新闻中心</div>
         <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'zilvweiquan');goUrl('/newsList/zlwq')" @mouseleave="leave()">自律维权</div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'hangyexinwen');goUrl('/newsList/hyxw')" @mouseleave="leave()">行业新闻</div>
-        <div class="menu-line"></div>
-        <!--<div class="menu-item" @click="goUrl('/newsList/xywy')">寻医问药</div>-->
-        <!--<div class="menu-line"></div>-->
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'xinyigai');goUrl('/newsList/xyg')" @mouseleave="leave()">新医改</div>
-        <div class="menu-line"></div>
-        <!--<div class="menu-item" @click="goUrl('/sjys')" @mouseleave="leave()">十佳医师</div>-->
         <div class="menu-item menu-one" @mouseenter="enterThree()" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi');goUrl('/sjys')" style="height: auto">
           十佳医师
           <div class="menu-two" v-if="menu_three_status"  @mouseleave="leave()">
@@ -108,8 +99,6 @@
             </ul>
           </div>
         </div>
-        <div class="menu-line"></div>
-        <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shaungbaifupin');goUrl('/newsList/sbfp')" @mouseleave="leave()">双百扶贫</div>
         <div class="menu-line"></div>
       </div>
     </div>

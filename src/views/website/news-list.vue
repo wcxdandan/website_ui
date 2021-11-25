@@ -1,7 +1,7 @@
 <template>
   <div id="news-list-main">
     <div class="main-header">
-      <sn-main v-on:watchnewtype="getNewType"></sn-main>
+      <header-main v-on:watchnewtype="getNewType"></header-main>
     </div>
     <div class="news-content">
       <div class="news-content-list-div">

@@ -195,7 +195,6 @@
       },
         /*
         * 左边menue展示控制
-        * 2018年3月26日17:49:45 gk
         * */
       toggleClick() {
         this.shrink = !this.shrink;

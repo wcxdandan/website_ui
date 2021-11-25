@@ -1,7 +1,7 @@
 <template>
   <div id="sjyx-main">
     <div class="main-header">
-      <sn-main v-on:watchSecondMenu="getSecondMenu"></sn-main>
+      <header-main v-on:watchSecondMenu="getSecondMenu"></header-main>
     </div>
     <div class="sjyx-content">
       <div class="menu-crumbs-info">
