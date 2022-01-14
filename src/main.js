@@ -12,6 +12,13 @@ Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key]);
 });
 Vue.use(VueResource);
+import VueAMap from 'vue-amap'
+Vue.use(VueAMap);
+VueAMap.initAMapApiLoader({
+  key: '305fa02031bb9b29f3b73fd70309b7b8',
+  plugin: ['AMap.Autocomplete', 'AMap.PlaceSearch', 'AMap.Scale', 'AMap.OverView', 'AMap.ToolBar', 'AMap.MapType', 'AMap.PolyEditor', 'AMap.CircleEditor'],
+  v: '1.4.4'
+});
 
 import '../static/iconfont.css';
 import './assets/css/snui.scss';
@@ -24,7 +31,6 @@ Vue.use(VueQuillEditor);
 
 import VueUeditorWrap from 'vue-ueditor-wrap'
 Vue.component('vue-ueditor-wrap', VueUeditorWrap);
-
 // 注册全局方法
 import { sendClickEvent } from './utils/utilsService';
 

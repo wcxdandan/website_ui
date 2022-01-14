@@ -19,6 +19,8 @@ import videoInfo from '@/views/website/video-info.vue';
 import videoNewsInfo from '@/views/website/video-new-info.vue';
 import categoryList from '@/views/website/categoryList.vue';
 import sjys from '@/views/website/sjys.vue';
+import contactUs from '@/views/website/contactUs.vue';
+import announcement from '@/views/website/news-announcement.vue';
 // import main from '@/views/website/main.vue';
 import newsManager from '@/views/system/news_manager.vue';
 import videoManager from '@/views/system/video_manager.vue';
@@ -157,7 +159,9 @@ export default new Router({
     {path: '/sjys', component: sjys},  // 十佳医师介绍页
     {path: '/dkzy', component: dkzy},  // 对口支援介绍页
     {path: '/zkysfh', component: zkysfh}, // 专科医师分会
-    {path: '/search', component: search}  // 搜索
+    {path: '/search', component: search},  // 搜索
+    {path: '/contactUs', component: contactUs},  // 搜索
+    {path: '/announcement', component: announcement}
    /* {
       path: '/main',
       component: main,

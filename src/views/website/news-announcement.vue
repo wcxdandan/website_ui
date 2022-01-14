@@ -8,26 +8,7 @@
         <div class="menu-crumbs-info">
           <label class="empty-block">&nbsp;</label>
           <label @click="mixinSendClickEvent($event, $route.fullPath, '首页');goUrl('/websiteHome')">首页<i  class="iconfont icon-jiantouyou"></i> </label>
-          <label v-if="newsType === 'partyBuildingNews' || newsType === 'partyRegulations' || newsType === 'seriesSpeech'" @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/djgz')">党建工作<i  class="iconfont icon-jiantouyou"></i> </label>
-          <label v-if="newsType === 'partyBuildingNews'">党建动态</label>
-          <label v-if="newsType === 'partyRegulations'">党章党规</label>
-          <label v-if="newsType === 'seriesSpeech'">系列讲话</label>
-          <label v-if="newsType === 'policyInterpretation' || newsType === 'noticeAnnouncement' || newsType === 'downloadColumn'" @click="mixinSendClickEvent($event, $route.fullPath, 'yishidingkao');goUrl('/ysdk')">医师定考 <i  class="iconfont icon-jiantouyou"></i> </label>
-          <label v-if="newsType === 'policyInterpretation'">政策解读</label>
-          <label v-if="newsType === 'noticeAnnouncement'">通知公告</label>
-          <label v-if="newsType === 'downloadColumn'">下载专栏</label>
-          <label v-if="newsType === 'gzdt'">工作动态</label>
-          <label v-if="newsType === 'xxgg'">信息公告</label>
-          <label v-if="newsType === 'hyxw'">行业新闻</label>
-          <label v-if="newsType === 'yspy'">医师培养</label>
-          <label v-if="newsType === 'zlwq'">自律维权</label>
-          <label v-if="newsType === 'xyg'">新医改</label>
-          <label v-if="newsType === 'sbfp'">双百扶贫</label>
-          <label v-if="newsType === 'xzzl'">下载专栏</label>
-          <label v-if="newsType === 'dsjhy'">第三次会员代表大会</label>
-          <label v-if="newsType === 'dfysxh'" @click="mixinSendClickEvent($event, $route.fullPath, 'difangyishixiehui');goUrl('/categoryList', '', 'dfysxh')">地方医师协会 <i  class="iconfont icon-jiantouyou"></i> </label>
-          <label v-if="newsType === 'zkysfh'" @click="mixinSendClickEvent($event, $route.fullPath, 'zhuankeyishifenhui');goUrl('/categoryList', '', 'zkysfh')">二级机构 <i  class="iconfont icon-jiantouyou"></i> </label>
-          <label v-if="$route.query.name !== undefined">{{$route.query.name}}</label>
+          <label @click="mixinSendClickEvent($event, $route.fullPath, 'dangjiangongzuo');goUrl('/announcement')">信息公告<i  class="iconfont icon-jiantouyou"></i> </label>
         </div>
         <div class="news-list-table">
           <div :class="index % 2 === 0 ? 'table-line blue-bgc':'table-line'" v-for="(item,index) in displayData"

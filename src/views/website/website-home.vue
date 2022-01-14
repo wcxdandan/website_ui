@@ -7,34 +7,11 @@
       <div class="news-div">
         <!--轮播图、重要消息-->
         <div class="news-first">
-          <div class="news-img">
-            <banner class="hospital-btn-banner"></banner>
-          </div>
-          <div class="news-info">
-            <div class="news-top">
-              <div class="title-mark">
-                <div class="info">重要消息(Important News)</div>
-              </div>
-              <div class="title-msg" v-if="importantNewslist.length > 0" @click="mixinSendClickEvent($event, $route.fullPath, 'zhongyaoxiaoxidiyitiao');goUrl('/newsInfo', firstImportantNewslist.id, 'zyxx')"><span v-html="firstImportantNewslist.newsTitle"></span></div>
-              <div class="msg-info" v-if="importantNewslist.length > 0" @click="mixinSendClickEvent($event, $route.fullPath, 'zhongyaoxiaoxidiyitiao');goUrl('/newsInfo', firstImportantNewslist.id, 'zyxx')">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span v-html="firstImportantNewslist.introduce"></span>...
-                <div class="detail" >详情 >></div>
-              </div>
-            </div>
-            <div class="news-bottom">
-              <ul>
-                <li @click="mixinSendClickEvent($event, $route.fullPath, 'zhongyaoxiaoxixiangqing');goUrl('/newsInfo', importantNews.id, 'zyxx')" v-for="importantNews in importantNewslist">
-                  <div class="text-info">
-                    <img v-if="importantNews.newest" style="padding-right: 5px; width: 30px;" src="../../assets/images/new.gif" alt="">
-                    <i v-else class="icon iconfont icon-tuoyuan"></i>
-                    <span v-html="importantNews.newsTitle"></span>
-                  </div>
-                  <div class="date-info">{{importantNews.createDate}}</div>
-                </li>
-              </ul>
-            </div>
-          </div>
+          <Carousel v-model="value1" loop>
+            <CarouselItem>
+              <img src="http://www.qinxin.cn//upload/banner/IMG_9535621205198.jpg" style="width: 100%;">
+            </CarouselItem>
+          </Carousel>
         </div>
         <!--对口支援、医师考定系统、继续教育学习-->
         <!--<div class="news-second">-->
@@ -169,12 +146,10 @@
         <div class="link-div">
           <div class="link-title">友情链接：</div>
           <div class="link-list">
-            <div class="link-info" onclick="window.open('http://www.cmda.net/')">中国医师协会</div>
-            <div class="link-info" onclick="window.open('http://www.sph.com.cn/')">山东省立医院</div>
-            <div class="link-info" onclick="window.open('http://www.qiluhospital.com/')">山东大学齐鲁医院</div>
-            <div class="link-info" onclick="window.open('http://www.sdwsjs.gov.cn/')">山东省卫生和计划生育委员会</div>
-            <div class="link-info" onclick="window.open('http://www.shandong.gov.cn/')">山东省人民政府</div>
-            <div class="link-info" onclick="window.open('http://www.qilu-pharma.com/')">齐鲁制药</div>
+            <div class="link-info" onclick="window.open('http://www.cmda.net/')">鑫盛公司</div>
+            <div class="link-info" onclick="window.open('http://www.sph.com.cn/')">鑫能煤业</div>
+            <div class="link-info" onclick="window.open('http://www.qiluhospital.com/')">鑫运煤业</div>
+            <div class="link-info" onclick="window.open('http://www.sdwsjs.gov.cn/')">鑫益煤业</div>
           </div>
         </div>
       </div>
@@ -190,6 +165,7 @@
       return {
         menu_two_status: false,
         sign: 1,
+        value1: 0,
         DH: 'all', // 地方医师协会
         ZK: '', // 专科医师分会
         HY: '', // 会员单位,
@@ -445,16 +421,7 @@
         margin: 40px auto;
         .news-first {
           width: 1180px;
-          height: 360px;
-          .news-img {
-            width: 580px;
-            height: 360px;
-            float: left;
-            img {
-              width: 100%;
-              height: 360px;
-            }
-          }
+          //height: 360px;
           .news-info {
             width: 580px;
             float: left;
@@ -876,10 +843,7 @@
           }
           .link-list {
             float: left;
-            width: 1060px;
             .link-info {
-              // width: 15%;
-              // text-align: center;
               float: left;
               font-size: 15px;
               color: $blue11;

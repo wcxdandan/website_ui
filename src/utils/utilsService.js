@@ -6,7 +6,7 @@ export const STATICHim = 'https://ysxhwebsite-ui.shunnengnet.com/#/'; // 前台�
 export const STATIC_LOCALHOST = 'https://static.shunnengnet.com'; // 静态资源域名
 export const HOSPITAL_LOGO_PATH = '/ysxhweb/hospitallogo/'; // 分会logo路径
 // export const LOCALHOSTHim = 'http://ysxhwebsite.jiankangsn.com/YSXHWebsite/'; // Pre路径
-export const LOCALHOSTHim = 'http://192.168.0.198:18080/'; // Pre路径
+export const LOCALHOSTHim = 'http://127.0.0.1:18080/'; // Pre路径
 // export const LOCALHOSTHim = 'http://ysxhwebsite.shunnengnet.com/YSXHWebsite/'; // API路径
 
 export function cleanLocalAll() {

@@ -66,7 +66,7 @@ export function insertNewsInfo(conditions) {
     introducePreserve: conditions.introduce,
     isRelease: conditions.isRelease,
     isCarousel: conditions.isCarousel,
-    createDate: new Date(conditions.createDate).getTime() / 1000
+    createDate: conditions.createDate
   };
   return request.post(
     UtilsService.LOCALHOSTHim + 'newsManageController.do?insertNews',  // ?insertAssessmentCycle

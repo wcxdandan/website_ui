@@ -289,9 +289,18 @@
           }
         }
       },
+      dateFormat(date) {
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        m = m < 10 ? '0' + m : m;
+        var d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        return y + '-' + m + '-' + d + ' 00:00:00';
+      },
       saveNews(params) {
         if (params === 2) { // 发布
           this.newsInfo.isRelease = '2';
+          this.newsInfo.createDate = this.dateFormat(this.newsInfo.createDate);
           newsManagerService.insertNewsInfo(this.newsInfo).then(result => {
             if (result.code === '0') {
               this.alertMsg('发布成功');

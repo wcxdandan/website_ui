@@ -75,10 +75,10 @@
     },
     mounted: function() {
         // 代码保证 this.$el 在 document 中
-      let self = this;
-      this.id = setInterval(function() {
-        self.$refs.swiper.next();
-      }, 3000);
+      // let self = this;
+      // this.id = setInterval(function() {
+      //   self.$refs.swiper.next();
+      // }, 3000);
     },
     methods: {
       changeBanner(id) {

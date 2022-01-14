@@ -238,9 +238,6 @@
             this.isLoading = false;
             if (result.code === '0') {
               this.dataTemp = result.list;
-              for (let i = 0; i < this.dataTemp.length; i++) {
-                this.dataTemp[i].createDate = this.fmtDate(this.dataTemp[i].createDate * 1000);
-              }
               this.handleListApproveHistory();
             }
             else {

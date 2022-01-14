@@ -20,14 +20,6 @@
         <div class="menu-second" v-if="fristType === 'yxys'">
           <div v-for="category in categoryList" :class="secondType === category.typecode ? 'title-ld-sel' : 'title-ld'" @click="mixinSendClickEvent($event, $route.fullPath, 'youxiuyishijieshu');secondTypeSel(fristType, category.typecode)">{{category.typename}}</div>
         </div>
-        <div :class="fristType === 'sjnys' ? 'title-text-sel' : 'title-text'" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-shijianvyishi');fristClick('sjnys')">十佳女医师</div>
-        <div class="menu-second" v-if="fristType === 'sjnys'">
-          <div v-for="category in categoryList" :class="secondType === category.typecode ? 'title-ld-sel' : 'title-ld'" @click="mixinSendClickEvent($event, $route.fullPath, 'shijianvyishijieshu');secondTypeSel(fristType, category.typecode)">{{category.typename}}</div>
-        </div>
-        <div :class="fristType === 'sjqnys' ? 'title-text-sel' : 'title-text'" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiayishi-shijiaqingnianyishi');fristClick('sjqnys')">十佳青年医师</div>
-        <div class="menu-second" v-if="fristType === 'sjqnys'">
-          <div v-for="category in categoryList" :class="secondType === category.typecode ? 'title-ld-sel' : 'title-ld'" @click="mixinSendClickEvent($event, $route.fullPath, 'shijiaqingnianyishijieshu');secondTypeSel(fristType, category.typecode)">{{category.typename}}</div>
-        </div>
       </div>
       <div class="right-context">
         <div class="sjys">
@@ -37,15 +29,11 @@
             <div class="sjys-header" v-if="this.fristType === 'dhzp'" >大会照片</div>
             <div class="sjys-header" v-if="this.fristType === 'sjys'" >十佳医师</div>
             <div class="sjys-header" v-if="this.fristType === 'yxys'" >优秀医师</div>
-            <div class="sjys-header" v-if="this.fristType === 'sjnys'" >十佳女医师</div>
-            <div class="sjys-header" v-if="this.fristType === 'sjqnys'" >十佳青年医师</div>
           </div>
           <!-- 详情面包屑 -->
           <div class="menu-header" v-else @click="showCont">
             <label v-if="this.fristType === 'sjys'">十佳医师 > </label>
             <label v-if="this.fristType === 'yxys'">优秀医师 > </label>
-            <label v-if="this.fristType === 'sjnys'">十佳女医师 > </label>
-            <label v-if="this.fristType === 'sjqnys'">十佳青年医师 > </label>
             <label>{{formatText()}}</label>
           </div>
           <div v-if="showList" class="menu-list">
@@ -263,7 +251,7 @@
       // 一层点击
       fristClick(name) {
         this.fristType = name;
-        if (this.fristType === 'sjys' || this.fristType === 'sjnys' || this.fristType === 'sjqnys' || this.fristType === 'yxys') {
+        if (this.fristType === 'sjys' || this.fristType === 'yxys') {
           this.secondType = '07';
           name = '07';
         }

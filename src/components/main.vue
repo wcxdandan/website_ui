@@ -7,23 +7,19 @@
           <img src="../assets/websiteImg/sdysxh.jpg">
           <div class="xh-name">
             <div class="china-name">黄土坡煤业集团</div>
-            <div class="english-name">SHANDONG MEDICAL DOCTOR ASSOCIATION</div>
+            <div class="english-name">Huangtupo Coal Industry Group</div>
           </div>
         </div>
         <div class="btn-list">
           <div class="runlight-list">
-            <div class="msg-info">管理</div>
-            <div class="msg-info">监督</div>
-            <div class="msg-info">维权</div>
-            <div class="msg-info">自律</div>
-            <div class="msg-info">协调</div>
-            <div class="msg-info">服务</div>
+            <div class="msg-info">科技兴企</div>
+            <div class="msg-info">人才强企</div>
           </div>
         </div>
 
         <div class="header-line">
           <div class="new-list">
-            <div class="logout-sl">&nbsp;听医生说话、为医生说话、帮医生解忧、促进行业自律</div>
+            <div class="logout-sl">&nbsp;以品质谋发展，以信誉度谋发展</div>
           </div>
         </div>
         <div class="header-search">
@@ -46,19 +42,6 @@
           <div class="menu-line"></div>
           <div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">
           <p @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao');goXHJS('xhjj')">黄煤介绍</p>
-          <div class="menu-two" v-if="menu_two_status"  @mouseleave="leave()">
-          <ul>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-guanlibanfa');goXHJS('glbf')">管理办法</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-xiehuijianjie');goXHJS('xhjj')">协会简介</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mingyuhuizhang');goXHJS('myhz')">名誉会长</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-huizhang');goXHJS('hz')">会长</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-fuhuizhang');goXHJS('fhz')">副会长</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-mishuzhang');goXHJS('msz')">秘书长</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-lishizhang');goXHJS('lsh')">理事会</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-jianshihui');goXHJS('jsh')">监事会</li>
-          <li class="menu-common" @click="mixinSendClickEvent($event, $route.fullPath, 'xiehuijieshao-zuzhijigou');goXHJS('zzjg')">组织机构</li>
-          </ul>
-          </div>
           </div>
         </div>
         <div class="menu-">
@@ -71,11 +54,11 @@
         </div>
         <div class="menu-">
           <div class="menu-line"></div>
-          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">信息公告</div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/announcement')" @mouseleave="leave()">信息公告</div>
         </div>
         <div class="menu-">
           <div class="menu-line"></div>
-          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">新闻中心</div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/newsList/hyxw', 'hyxw')" @mouseleave="leave()">行业新闻</div>
         </div>
         <div class="menu-">
           <div class="menu-line"></div>
@@ -83,7 +66,7 @@
         </div>
         <div class="menu-">
           <div class="menu-line"></div>
-          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/websiteHome')" @mouseleave="leave()">联系我们</div>
+          <div class="menu-item" @click="mixinSendClickEvent($event, $route.fullPath, 'shouye');goUrl('/contactUs')" @mouseleave="leave()">联系我们</div>
         </div>
         <!--<div class="menu-line"></div>-->
         <!--<div class="menu-item menu-one" @mouseenter="enter()" style="height: auto">-->
@@ -287,7 +270,7 @@
               font-family: "Microsoft YaHei";
             }
             .english-name {
-              font-size: 15px;
+              font-size: 23px;
               font-family: "Microsoft YaHei";
               font-weight: bold;
             }
@@ -302,7 +285,7 @@
           overflow: hidden;
           .runlight-list {
             position: absolute;
-            width: 425px;
+            width: 300px;
             animation: mymove 3s linear 1 forwards;
             margin-left: 20px;
             .msg-info {
@@ -352,7 +335,7 @@
         .header-line {
           float: right;
           overflow: hidden;
-          width: 416px;
+          width: 40%;
           .new-list {
             width: 416px;
             animation: mymove 3s linear 1 forwards;
